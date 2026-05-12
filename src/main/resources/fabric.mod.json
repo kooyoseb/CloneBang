@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "clonebang",
+	"version": "${version}",
+	"name": "CloneBang",
+	"description": "Do not use the Minecraft clone command inconveniently again.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/kooyoseb/CloneBang"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/clonebang/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"clonebang.CloneBang"
+		],
+		"client": [
+			"clonebang.client.CloneBangClient"
+		]
+	},
+	"mixins": [
+		"clonebang.mixins.json",
+		{
+			"config": "clonebang.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
